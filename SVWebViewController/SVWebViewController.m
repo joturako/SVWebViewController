@@ -127,7 +127,7 @@
                                                               style:UIBarButtonItemStylePlain
                                                              target:self
                                                              action:@selector(goBackTapped:)];
-        _backBarButtonItem.width = 18.0f;
+       // _backBarButtonItem.width = 18.0f;
     }
     return _backBarButtonItem;
 }
@@ -138,7 +138,7 @@
                                                                  style:UIBarButtonItemStylePlain
                                                                 target:self
                                                                 action:@selector(goForwardTapped:)];
-        _forwardBarButtonItem.width = 18.0f;
+      //  _forwardBarButtonItem.width = 18.0f;
     }
     return _forwardBarButtonItem;
 }
@@ -191,6 +191,7 @@
                           nil];
         
         UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, toolbarWidth, 44.0f)];
+        [toolbar sizeToFit];
         toolbar.items = items;
         toolbar.barStyle = self.navigationController.navigationBar.barStyle;
         toolbar.tintColor = self.navigationController.navigationBar.tintColor;
